@@ -61,8 +61,8 @@
 /* Optional: Style for open windows */
 .window {
     position: absolute;
-    width: 300px;
-    height: 200px;
+    width: 400px;
+    height: 300px;
     background-color: #ecf0f1;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
@@ -72,15 +72,38 @@
     flex-direction: column;
 }
 
+/* Window header (like the title bar) */
 .window .window-header {
     background-color: #3498db;
     padding: 10px;
     color: white;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .window .window-body {
     padding: 20px;
     flex-grow: 1;
     overflow-y: auto;
+}
+
+/* Web Browser specific styles */
+#browser-window .window-body {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#browser-window .window-body iframe {
+    width: 100%;
+    height: 250px;
+    border: none;
+}
+
+#browser-window .window-header input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
 }
